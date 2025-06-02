@@ -1,7 +1,7 @@
 const express = require('express');
 
 /* Conexión a la base de datos */
-const db = require("../db");
+const db = require("../functions/db");
 
 /* Router del servidor */
 const router = express.Router();

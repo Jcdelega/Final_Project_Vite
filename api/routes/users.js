@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require("../db");
+const db = require("../functions/db");
 const router = express.Router();
 
 // Registrar usuario (POST /api/users)
