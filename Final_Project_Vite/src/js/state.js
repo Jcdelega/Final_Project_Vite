@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../node_modules/axios'
 /* Este MODULO que maneja todo el estado de la aplicación, concentra la funcionalidad para manipular datos */
 const BASE_URL_API = "http://localhost:3005/api";
 
