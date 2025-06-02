@@ -1,5 +1,3 @@
-//import axios from 'https://unpkg.com/axios/dist/axios.min.js'
-//const axios = require('axios/dist/browser/axios.cjs');
 /* Este MODULO que maneja todo el estado de la aplicación, concentra la funcionalidad para manipular datos */
 const BASE_URL_API = "http://localhost:3005/api";
 
@@ -55,3 +53,4 @@ export async function postUser(userData){
         return {}
     }
 }
+

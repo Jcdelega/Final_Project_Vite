@@ -1,5 +1,3 @@
-/* (MODULO) Este es el punto de entrada del aplicativo, el que concentra todas las funcionalidades */
-
 import { userSchema, todoSchema, validate } from "./schema.js";
 import { addTodo, postUser } from "./state.js";
 import { 
@@ -24,7 +22,7 @@ registerForm.addEventListener("submit", (e) => {
         renderErrors(registerForm, errors);
     } else {
         renderErrors(registerForm); // limpia
-        //renderRegisterOutput(registerOutput, data);
+        renderRegisterOutput(registerOutput, data);
         postUser(data);
         registerForm.reset();
     }
@@ -56,6 +54,7 @@ todoForm.addEventListener("submit", (e) => {
 });
 
 const toggleThemeBtn = document.getElementById('toggle-theme-btn');
+const icon = document.getElementById('icon');
 
 toggleThemeBtn.addEventListener('click', () => {
     const body = document.body;
@@ -63,7 +62,12 @@ toggleThemeBtn.addEventListener('click', () => {
 
     if (currentBgColor === 'rgb(255, 255, 255)' || currentBgColor === '#FFFFFF') {
         body.style.backgroundColor = 'rgb(34, 34, 34)'; // Dark theme
+        toggleThemeBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+        icon.classList.remove("bi-moon-fill");
+        icon.classList.add("bi-moon");
     } else {
         body.style.backgroundColor = 'rgb(255, 255, 255)'; // Light theme
+        icon.classList.remove("bi-moon");
+        icon.classList.add("bi-moon-fill");
     }
 });
