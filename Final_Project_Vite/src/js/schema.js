@@ -1,4 +1,6 @@
-import { z } from 'zod';
+import { z } from 'https://cdn.jsdelivr.net/npm/zod@3.22.4/+esm';
+
+
 
 export const userSchema = z.object({
     name: z.string().trim().min(2, "2 characters minimun"),
