@@ -1,7 +1,6 @@
-import axios from '../../node_modules/axios'
+import axios from 'axios'
 /* Este MODULO que maneja todo el estado de la aplicación, concentra la funcionalidad para manipular datos */
 const BASE_URL_API = "http://localhost:3005/api";
-
 
 export const getTodos = async () => {
 
@@ -15,11 +14,6 @@ export const getTodos = async () => {
     }
 }
 
-/* export const todos = getTodos() */
-//todos();
-/* console.log(todos) */
-
-/* addTodo */
 /* Ejecutar función para añadir un nuevo pendiente, a un listado de pendientes y si es a traves de API, llamar a la API con un POST para crear. */
 export async function addTodo(item) {
     //const todos = getTodos()
