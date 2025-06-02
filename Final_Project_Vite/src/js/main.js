@@ -55,3 +55,15 @@ todoForm.addEventListener("submit", (e) => {
     }
 });
 
+const toggleThemeBtn = document.getElementById('toggle-theme-btn');
+
+toggleThemeBtn.addEventListener('click', () => {
+    const body = document.body;
+    const currentBgColor = body.style.backgroundColor;
+
+    if (currentBgColor === 'rgb(255, 255, 255)' || currentBgColor === '#FFFFFF') {
+        body.style.backgroundColor = 'rgb(34, 34, 34)'; // Dark theme
+    } else {
+        body.style.backgroundColor = 'rgb(255, 255, 255)'; // Light theme
+    }
+});

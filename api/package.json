@@ -8,12 +8,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "API REST of todoapp",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "request": "^2.88.2",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "serverless-http":"^3.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
