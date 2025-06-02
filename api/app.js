@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors')
+const serverless = require('serverless-http');
 
 const users = require('./routes/users');
 const todos = require('./routes/todos');
@@ -17,8 +18,10 @@ app.use('/api/todos', todos);
 
 console.log("Rutas cargadas");
 
-const PORT = 3005;
+export const handler = serverless(app);
+
+/* const PORT = 3005;
 
 app.listen(PORT, () => {
     console.log(`API corriendo en http://localhost:${PORT}`)
-})
+}) */
